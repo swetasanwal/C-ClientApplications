@@ -1,0 +1,47 @@
+﻿<Window x:Class="StudentDatabase.StudentDelete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentDatabase"
+        mc:Ignorable="d"
+        Title="StudentDelete" Height="600" Width="1000">
+    <StackPanel Background="DarkBlue">
+        <Grid x:Name="uxGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" FontWeight="Bold" FontSize="36" Height="50" Margin="368,10,-134,-9" Grid.ColumnSpan="2" Foreground="OrangeRed">Delete a Record</TextBlock>
+            <TextBlock Grid.Row="1" Margin="145,98,81,-98" TextAlignment="Center" FontWeight="Bold" FontSize="18">Student ID:</TextBlock>
+            <TextBox x:Name="uxID" Grid.Row="1" Grid.ColumnSpan="2" Margin="320,98,172,-72" Height="25" Width="300" PreviewKeyDown="uxID_PreviewKeyDown"/>
+
+            <TextBlock Grid.Row="2" Margin="145,154,81,-154" TextAlignment="Center" FontWeight="Bold" FontSize="18">Student Name:</TextBlock>
+            <TextBox x:Name="uxName" Grid.Row="2" Grid.ColumnSpan="2" Margin="320,154,172,-128" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="3" Margin="145,205,81,-205" TextAlignment="Center" FontWeight="Bold" FontSize="18">Student Address:</TextBlock>
+            <TextBox x:Name="uxAddress" Grid.Row="1" Grid.ColumnSpan="2" Margin="320,205,172,-179" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="4" Margin="145,256,81,-256" TextAlignment="Center" FontWeight="Bold" FontSize="18">Gender:</TextBlock>
+            <TextBox x:Name="uxGender" Grid.Row="4" Grid.ColumnSpan="2" Margin="320,256,172,-230" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="5" Margin="145,307,81,-307" TextAlignment="Center" FontWeight="Bold" FontSize="18">DOB:</TextBlock>
+            <TextBox x:Name="uxDOB" Grid.Row="5" Grid.ColumnSpan="2" Margin="320,307,172,-281" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="6" Margin="145,358,81,-358" TextAlignment="Center" FontWeight="Bold" FontSize="18">Course:</TextBlock>
+            <TextBox x:Name="uxCourse" Grid.Row="6" Grid.ColumnSpan="2" Margin="320,358,172,-332" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="7" Margin="145,409,81,-409" TextAlignment="Center" FontWeight="Bold" FontSize="18">Phone:</TextBlock>
+            <TextBox x:Name="uxPhone" Grid.Row="7" Grid.ColumnSpan="2" Margin="320,409,172,-383" Height="25" Width="300"/>
+
+            <Button x:Name="uxDelete" Grid.Row="1" Click="uxDelete_Click" Background="White" Margin="338,465,58,-464" Width="100" Height="50" IsEnabled="False">Delete</Button>
+            <Button x:Name="uxCancel" Grid.Row="1" Click="uxCancel_Click" Background="White" Margin="8,465,388,-464" Width="100" Height="50" Grid.Column="1">Cancel</Button>
+            <Button x:Name="uxHome" Grid.Row="1" Click="uxHome_Click" Background="White" Margin="161,465,235,-464" Width="100" Height="50" Grid.Column="1">Home</Button>
+        </Grid>
+    </StackPanel>
+</Window>

@@ -1,0 +1,52 @@
+﻿<Window x:Class="StudentDatabase.StudentEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentDatabase"
+        mc:Ignorable="d"
+        Title="StudentEntry" Height="600" Width="1000"
+        FocusManager.FocusedElement="{Binding ElementName=uxID}">
+    <StackPanel Background="DarkBlue">
+        <Grid x:Name="uxGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" FontWeight="Bold" FontSize="36" Height="50" Margin="338,10,-104,190" Grid.ColumnSpan="2" Foreground="OrangeRed">STUDENT ENTRY</TextBlock>
+            <TextBlock Grid.Row="1" Margin="-5,98,231,-98" TextAlignment="Center" FontWeight="Bold" FontSize="18">Student ID:</TextBlock>
+            <TextBox x:Name="uxID" Grid.Row="1" Grid.ColumnSpan="2" Margin="214,98,478,128" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="1" Margin="-5,149,231,-149" TextAlignment="Center" FontWeight="Bold" FontSize="18">Student Name:</TextBlock>
+            <TextBox x:Name="uxName" Grid.Row="1" Grid.ColumnSpan="2" Margin="214,149,478,77" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="1" Margin="-5,198,231,-198" TextAlignment="Center" FontWeight="Bold" FontSize="18">Student Address:</TextBlock>
+            <TextBox x:Name="uxAddress" Grid.Row="1" Grid.ColumnSpan="2" Margin="214,198,478,28" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="1" Margin="-5,254,231,-254" TextAlignment="Center" FontWeight="Bold" FontSize="18">Gender:</TextBlock>
+            <TextBox x:Name="uxGender" Grid.Row="1" Grid.ColumnSpan="2" Margin="214,251,478,-25" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="1" Margin="-5,305,231,-305" TextAlignment="Center" FontWeight="Bold" FontSize="18">DOB:</TextBlock>
+            <DatePicker x:Name="uxDOB" Grid.Row="1" Grid.ColumnSpan="2" Margin="214,305,478,-79" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="1" Margin="-5,363,231,-363" TextAlignment="Center" FontWeight="Bold" FontSize="18">Course:</TextBlock>
+            <TextBox x:Name="uxCourse" Grid.Row="1" Grid.ColumnSpan="2" Margin="214,363,478,-137" Height="25" Width="300"/>
+
+            <TextBlock Grid.Row="1" Margin="-5,414,231,-414" TextAlignment="Center" FontWeight="Bold" FontSize="18">Phone:</TextBlock>
+            <TextBox x:Name="uxPhone" Grid.Row="1" Grid.ColumnSpan="2" Margin="214,424,478,-198" Height="25" Width="300"/>
+
+            <Image Grid.Row="1" Margin="158,66,188,-65" Grid.Column="1" Stretch="Fill" Name="imgPhoto" Width="150" Height="250"/>
+            <TextBox x:Name="uxImagePath" Grid.Row="1" Margin="97,349,99,-123" Height="25" Width="300" Grid.Column="1"/>
+            <Button x:Name="uxImage" Grid.Row="1" Click="btnLoad_Click" Background="White" Margin="208,394,188,-193" Height="50" Width="100" RenderTransformOrigin="1.06,0.649" Grid.Column="1">Upload</Button>
+
+            <Button x:Name="uxAdd" Grid.Row="1" Click="uxSubmit_Click" Background="White" Margin="270,475,126,-274" Height="50" RenderTransformOrigin="1.06,0.649" Width="100">Add</Button>
+            <Button x:Name="uxCancel" Grid.Row="1" Click="uxCancel_Click" Background="White" Margin="472,475,420,-274" Grid.ColumnSpan="2" Width="100" Height="50">Cancel</Button>
+            <Button x:Name="uxHome" Grid.Row="1" Click="uxHome_Click" Background="White" Margin="158,475,238,-274" Width="100" Height="50" Grid.Column="1">Home</Button>
+        </Grid>
+    </StackPanel>
+</Window>

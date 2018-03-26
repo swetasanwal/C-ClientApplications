@@ -1,0 +1,31 @@
+﻿<Window x:Class="StudentDatabase.RegistrationOptions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentDatabase"
+        mc:Ignorable="d"
+        Title="RegistrationOptions" Height="450" Width="800">
+    <StackPanel Background="DarkBlue">
+        <Grid x:Name="uxGridStudent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="150" Margin="20,0,0,0">Welcome ADMIN</TextBlock>
+            <Button Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Margin="0,0,20,0" Click="Button_Click">Logout</Button>
+
+            <TextBlock Grid.Row="1" FontWeight="Bold" FontSize="36" Height="50" Margin="214,0,20,0" Grid.ColumnSpan="2" Foreground="OrangeRed">STUDENT DATABASE</TextBlock>
+            <Button Grid.Row="1" Grid.RowSpan="1" Margin="296,114,296,-59" Grid.ColumnSpan="2" Height="23" FontWeight="Bold" Click="Button_Click_1">Student Entry</Button>
+            <Button Grid.Row="1" Grid.RowSpan="1" Margin="296,167,296,-107" Grid.ColumnSpan="2" Height="20" FontWeight="Bold" Click="Button_Click_2">Student Enquiry</Button>
+            <Button Grid.Row="1" Grid.RowSpan="1" Margin="296,217,296,-161" Grid.ColumnSpan="2" Height="23" FontWeight="Bold" Click="Button_Click_3">Modify a Record</Button>
+            <Button Grid.Row="1" Grid.RowSpan="1" Margin="296,270,296,-216" Grid.ColumnSpan="2" Height="23" FontWeight="Bold" Click="Button_Click_4">Delete a Record</Button>
+            <Button Grid.Row="1" Grid.RowSpan="1" Margin="296,327,296,-270" Grid.ColumnSpan="2" FontWeight="Bold" Click="Button_Click_5">Report</Button>
+        </Grid>
+
+    </StackPanel>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="StudentDatabase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentDatabase"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock TextAlignment="Center" FontWeight="Bold" FontSize="48"> STUDENT DATABASE</TextBlock>
+
+        <Grid x:Name="uxGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+           <TextBlock Grid.Column="0" Grid.Row="20" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"  Margin="150,50,0,10">User ID</TextBlock>
+            <TextBox x:Name="uxName" Grid.Column="1" Grid.Row="20" Margin="20,50,100,150">ssanwal</TextBox>
+
+            <TextBlock Grid.Column="0" Grid.Row="30" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"  Margin="150,100,0,0">Password</TextBlock>
+            <PasswordBox x:Name="uxPassword" Grid.Column="1" Grid.Row="30" Margin="20,100,100,100" PasswordChar="*" Password="123456"></PasswordBox>
+
+
+            <Button x:Name="uxSubmit" Grid.Column="1" Grid.Row="80" Margin="20,200,400,0" Click="uxSubmit_Click">Login</Button>
+            <Button x:Name="uxExit" Grid.Column="1" Grid.Row="80" Margin="200,200,200,0" Click="uxExit_Click">Exit</Button>
+        </Grid>
+    </StackPanel>
+</Window>
